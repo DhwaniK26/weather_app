@@ -4,51 +4,29 @@ import Footer from './components/Footer';
 import Point from './models/Point';
 import WeatherDialogBox from './components/WeatherDialogBox';
 import { useState } from 'react';
-import Weather from './models/Weather';
 
 function App() {
-  const [weather, setWeather] = useState(null)
-
-  var myWeather = weather;
+  const [location, setLocation] = useState(null);
 
   const myLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
-          onMapHover(new Point(position.coords.latitude, position.coords.longitude), "latLang")
+          setLocation({place: new Point(position.coords.latitude, position.coords.longitude), type: "latLang"})
+          return
       }, () => {
-          onMapHover("New Delhi", "Place")
-      })
-    }
-  }
-
-  const onMapHover = async (element, type) => {
-    if (type === "latLang") {
-      await fetch("https://api.openweathermap.org/data/2.5/weather?units=metric&lat=" + element.latitude + "&lon=" + element.longitude + "&appid=b317aca2e83ad16e219ff2283ca837d5").then((response) => {
-        if (response.ok) {
-          response.json().then((response) => {
-            setWeather(new Weather(response.name, response.main.temp, response.weather[0].description.charAt(0).toUpperCase() + response.weather[0].description.slice(1), response.main.feels_like, response.main.humidity))
-          })
-        }
-      })
-    } else if (type === "Place") {
-      await fetch("https://api.openweathermap.org/data/2.5/weather?units=metric&q=" + element + "&appid=b317aca2e83ad16e219ff2283ca837d5").then((response) => {
-        if (response.ok) {
-          response.json().then((response) => {
-            setWeather(new Weather(response.name, response.main.temp, response.weather[0].description.charAt(0).toUpperCase() + response.weather[0].description.slice(1), response.main.feels_like, response.main.humidity))
-          })
-        }
+          setLocation({place: "New Delhi", type: "Place"})
       })
     }
   }
 
   return (
     <>
-      <Header myFunc={onMapHover}/>
+      <Header myFunc={setLocation}/>
       <div className='container-flex m-5'>
         <div className='container d-flex justify-content-around flex-wrap align-items-center flex-row'>
-          <Map myFunc={onMapHover} />
+          <Map myFunc={setLocation} />
           {
-            (myWeather != null) ? <WeatherDialogBox temperature={myWeather.temperature} condition={myWeather.message} place={myWeather.place} feels_like={myWeather.feels_like} humidity={myWeather.humidity} /> : myLocation()
+            (location != null) ? <WeatherDialogBox location={location.place} searchType={location.type} /> : myLocation()
           }
         </div>
       </div>

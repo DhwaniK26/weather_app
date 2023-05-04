@@ -11,11 +11,11 @@ export default function Header({ myFunc }) {
                         <input className="form-control me-2" type="search" placeholder="Search" id="search" onKeyDown={
                             (e) => {
                                 if(e.key == "Enter") {
-                                    myFunc(e.target.value, "Place")
+                                    myFunc({place: e.target.value, type: "Place"})
                                 }
                             }
                         }/>
-                        <button className="border-0 border-radius-25" onClick={() => myFunc(document.getElementById("search").value, "Place")} type="submit">Search</button>
+                        <button className="border-0 border-radius-25" onClick={() => myFunc({place: document.getElementById("search").value, type: "Place"})} type="submit">Search</button>
                     </div>
                 </div>
             </nav >
