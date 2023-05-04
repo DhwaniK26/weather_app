@@ -1,18 +1,24 @@
 import React from 'react'
 import '../assets/stylesheets/header.css'
 
-export default function Header() {
+export default function Header({ myFunc }) {
     return (
         <>
-            <nav class="navbar">
-                <div class="container">
-                    <a class="navbar-brand">Weather App</a>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="border-0 border-radius-25" type="submit">Search</button>
-                    </form>
+            <nav className="navbar">
+                <div className="container">
+                    <a className="navbar-brand">Weather App</a>
+                    <div className="d-flex" name="location">
+                        <input className="form-control me-2" type="search" placeholder="Search" id="search" onKeyDown={
+                            (e) => {
+                                if(e.key == "Enter") {
+                                    myFunc(e.target.value, "Place")
+                                }
+                            }
+                        }/>
+                        <button className="border-0 border-radius-25" onClick={() => myFunc(document.getElementById("search").value, "Place")} type="submit">Search</button>
+                    </div>
                 </div>
-            </nav>
+            </nav >
         </>
     )
 }
