@@ -1,0 +1,55 @@
+.dialogbox {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 360px;
+    background-color: #688eb7;
+    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+}
+
+.heading-text {
+    font-size: 25px;
+    color: aliceblue;
+}
+
+.under_line {
+    height: 3px;
+    margin-top: 3px;
+    border-bottom: 2px solid rgba(211, 220, 228, 0.6);
+}
+
+.weather-img {
+    height: 170px;
+}
+
+.temp_cel {
+    font-size: 50px;
+    color: aliceblue;
+}
+
+.temp_text {
+    font-size: 22px;
+    color: aliceblue;
+}
+
+.temp_state {
+    color: aliceblue;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.a {
+    padding: 5px;
+    margin-top: 15px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.text {
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.text_title {
+    padding: 4px;
+    font-size: 16px;
+}
