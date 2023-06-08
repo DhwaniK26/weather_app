@@ -9,7 +9,7 @@
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 321px) and (max-width: 768px) {
     .hourly-card {
         width: 100% !important;
     }
@@ -23,4 +23,11 @@
     .map {
         display: none;
     }
+}
+
+
+@media screen and (max-width: 320px) {
+  .searchbar {
+    padding: 0 !important;
+  }
 }

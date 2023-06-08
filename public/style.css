@@ -81,13 +81,19 @@ body {
 .hourly-card p {
     font-weight: 600;
 }
-
 /* Hourly Card End */
+
+/* Daily Card Start */
+.daily-card {
+    background-color: #1e1f23;
+    border-radius: 20px;
+    margin: 5px;
+}
+/* Daily Card End */
 
 /* OwlCarousel Start */
 .owl-item {
     display: flex;
     justify-content: space-around;
 }
-
 /* OwlCarousel End */

@@ -1,8 +1,6 @@
-class Point {
+export default class Coordinates {
     constructor(latitude, longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
     }
 }
-
-export default Point;
