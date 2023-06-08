@@ -1,0 +1,93 @@
+html,
+body {
+    background: #1e1f23 !important;
+}
+
+.input-field {
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: #2e2f3a;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+
+/* Navbar Start */
+.top-bar {
+    background-color: #1e1f23;
+}
+
+.top-bar .date-time {
+    color: white;
+    font-size: 20px;
+}
+
+.search-button {
+    background-color: aliceblue !important;
+}
+
+.search-button:active {
+    background-color: #1e1f23 !important;
+    border: 1px solid aliceblue;
+}
+
+.search-button:active>i {
+    color: aliceblue !important;
+}
+
+.location-button:active {
+    background-color: aliceblue;
+}
+
+.location-button:active>i {
+    color: #1e1f23 !important;
+}
+
+/* Navbar End */
+
+/* Main Body Start */
+.main-body {
+    background-color: #1e1f23;
+}
+
+.main-body .container {
+    color: white;
+}
+
+.main-body span {
+    font-size: 16px;
+}
+
+/* Main Body End */
+
+/* Main Body Common Start */
+.weather-info,
+.map>*,
+.daily-broadcasts>* {
+    background-color: #2e2f3a;
+    border-radius: 25px;
+}
+
+/* Main Body Common End */
+
+/* Hourly Card Start */
+.hourly-card {
+    color: black;
+    background-color: #cbe8ec;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.hourly-card p {
+    font-weight: 600;
+}
+
+/* Hourly Card End */
+
+/* OwlCarousel Start */
+.owl-item {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* OwlCarousel End */

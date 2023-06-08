@@ -1,0 +1,26 @@
+@media screen and (max-width: 1023px) {
+    .main-body>.container>.row {
+        align-items: center;
+        flex-direction: column-reverse !important;
+    }
+
+    .main-body>.container>.row>* {
+        margin: 10px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .hourly-card {
+        width: 100% !important;
+    }
+
+    .map {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .map {
+        display: none;
+    }
+}
