@@ -1,3 +1,4 @@
+/* Root Start */
 html,
 body {
     background: #1e1f23 !important;
@@ -15,6 +16,25 @@ a {
     color: white;
     font-weight: 600;
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: aliceblue;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e1f23;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Root End */
 
 /* Navbar Start */
 .top-bar {
@@ -46,7 +66,6 @@ a {
 .location-button:active>i {
     color: #1e1f23 !important;
 }
-
 /* Navbar End */
 
 /* Main Body Start */
@@ -61,66 +80,40 @@ a {
 .main-body span {
     font-size: 16px;
 }
-
 /* Main Body End */
 
 /* Main Body Common Start */
 .weather-info,
 .map>*,
-.daily-forecasts>* {
+.daily-forecasts>*,
+.past-temperature-data>* {
     background-color: #2e2f3a;
     border-radius: 25px;
 }
-
 /* Main Body Common End */
 
-
-
-/* Hourly Card Start */
+/* Hourly Forecasts Start */
 .hourly-card {
     background-color: #1e1f23;
     border-radius: 20px;
     margin: 5px;
 }
 
+.hourly-forecasts .col {
+    height: 350px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 /* Hourly Card End */
-
 
 /* OwlCarousel Start */
 .owl-item {
     display: flex;
     justify-content: space-around;
 }
-
 /* OwlCarousel End */
 
-.daily-forecasts .col {
-    height: 350px;
-    overflow-y: scroll;
-}
-
-/* width */
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: aliceblue;
-    border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #1e1f23;
-    border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
+/* Footer Start */
 .footer {
     background-color: #1e1f23;
     color: aliceblue;
@@ -133,3 +126,4 @@ a {
 .footer a:hover {
     color: #2e2f3a;
 }
+/* Footer End */

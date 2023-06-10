@@ -1,3 +1,11 @@
+/* Large Screen Tablet */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .daily-forecasts .col {
+        height: 210px;
+    }
+}
+
+/* Small Screen Tablet and Smaller Screen */
 @media screen and (max-width: 1023px) {
     .main-body>.container>.row {
         align-items: center;
@@ -5,23 +13,21 @@
     }
 }
 
-@media screen and (min-width: 321px) and (max-width: 768px) {
-    .hourly-card {
-        width: 100% !important;
-    }
-
+/* Very Small Screen Tablet */
+@media screen and (min-width: 650px) and (max-width: 768px) {
     .map {
         height: 250px;
     }
 }
 
+/* Large Screen Mobile and Smaller */
 @media screen and (max-width: 767px) {
     .map {
         display: none;
     }
 }
 
-
+/* Very Small Screen Mobile */
 @media screen and (max-width: 320px) {
   .searchbar {
     padding: 0 !important;
