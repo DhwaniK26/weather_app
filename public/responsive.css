@@ -3,10 +3,6 @@
         align-items: center;
         flex-direction: column-reverse !important;
     }
-
-    .main-body>.container>.row>* {
-        margin: 10px;
-    }
 }
 
 @media screen and (min-width: 321px) and (max-width: 768px) {

@@ -3,6 +3,10 @@ body {
     background: #1e1f23 !important;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 .input-field {
     padding: 8px 15px;
     border-radius: 10px;
@@ -63,37 +67,69 @@ body {
 /* Main Body Common Start */
 .weather-info,
 .map>*,
-.daily-broadcasts>* {
+.daily-forecasts>* {
     background-color: #2e2f3a;
     border-radius: 25px;
 }
 
 /* Main Body Common End */
 
+
+
 /* Hourly Card Start */
 .hourly-card {
-    color: black;
-    background-color: #cbe8ec;
-    border-radius: 20px;
-    padding: 5px;
-}
-
-.hourly-card p {
-    font-weight: 600;
-}
-/* Hourly Card End */
-
-/* Daily Card Start */
-.daily-card {
     background-color: #1e1f23;
     border-radius: 20px;
     margin: 5px;
 }
-/* Daily Card End */
+
+/* Hourly Card End */
+
 
 /* OwlCarousel Start */
 .owl-item {
     display: flex;
     justify-content: space-around;
 }
+
 /* OwlCarousel End */
+
+.daily-forecasts .col {
+    height: 350px;
+    overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: aliceblue;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #1e1f23;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.footer {
+    background-color: #1e1f23;
+    color: aliceblue;
+}
+
+.footer a {
+    color: aliceblue;
+}
+
+.footer a:hover {
+    color: #2e2f3a;
+}
