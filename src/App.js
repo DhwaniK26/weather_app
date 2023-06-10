@@ -21,7 +21,7 @@ function App() {
   const [weatherConditionIcon, setWeatherConditionIcon] = useState(null);
   const [pastForecastData, setPastForecastData] = useState(null);
 
-  const handleError = () => setError(true)
+  const handleError = (e) => setError(e)
 
   // Main Api Fetching function
   useEffect(() => {
@@ -42,7 +42,10 @@ function App() {
         const pastForecastResponse = await fetch(`${apiUrlHeader}history.json?q=${locationData}&dt=${currentDate.toISOString().split('T')[0]}&lang=en&end_dt=${new Date().toISOString().split('T')[0]}`, apiOptions);
 
         if (!weatherForecastResponse.ok || !pastForecastResponse.ok) {
-          handleError();
+          handleError(true);
+          return
+        } else {
+          handleError(false);
         }
 
         const weatherData = await weatherForecastResponse.json();
@@ -52,7 +55,7 @@ function App() {
         setWeatherConditionIcon(weatherIcons(weatherData.current.condition.code, "white"));
         setPastForecastData(pastForecast.forecast.forecastday);
       } catch {
-        handleError();
+        handleError(true);
       }
     };
 
