@@ -6,12 +6,12 @@ import Navbar from './components/Navbar';
 import RenderHourlyCards from './components/RenderHourlyCard';
 import Map from './components/Map';
 import Chart from './components/Chart';
-
-// Modules
-import weatherIcons from './modules/WeatherIcon'
 import Footer from './components/Footer';
 import LoadingAnimation from './components/LoadingAnimation';
 import ErrorMessage from './components/ErrorMessage';
+
+// Modules
+import weatherIcons from './modules/WeatherIcon'
 
 function App() {
   const [isError, setError] = useState(false);
@@ -29,10 +29,11 @@ function App() {
     const apiOptions = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'bc3723fda1mshae3120cdcce0c02p1d76acjsn162f9234fb79',
+        'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
         'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
       }
     };
+
     const currentDate = new Date();
     currentDate.setDate(currentDate.getDate() - 6);
 
