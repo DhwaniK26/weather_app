@@ -145,14 +145,7 @@ function App() {
 
             <div className='row'>
 
-              {/* Past Temperature Section Start */}
-              <div className='past-temperature-data col-11 col-lg-6 col-xl-7 my-3'>
-                <div className='container-flex'>
-                  <h2 className='p-3'>Past Temperature Data</h2>
-                  {pastForecastData ? isError ? <ErrorMessage /> : <Chart weatherData={pastForecastData} unit={unit} /> : <LoadingAnimation />}
-                </div>
-              </div>
-              {/* Past Temperature Section End */}
+            
 
               {/* Hourly Forecast Section Start */}
               <div className='hourly-forecasts col-12 col-lg-6 col-xl-5 my-3'>
